@@ -1,5 +1,12 @@
 // vim: set ts=2 sw=2 expandtab:
 
+/*
+ * Credits: Rewokring of TwitBase code from HBase In Action
+ *
+ * https://github.com/hbaseinaction/twitbase
+ *
+ */
+
 public abstract class UserModel {
 
   public String user;

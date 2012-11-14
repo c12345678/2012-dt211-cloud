@@ -1,5 +1,12 @@
 // vim: set ts=2 sw=2 expandtab:
 
+/*
+ * Credits: Rewokring of TwitBase code from HBase In Action
+ *
+ * https://github.com/hbaseinaction/twitbase
+ *
+ */
+
 import java.io.IOException;
 import java.util.UUID;
 import org.apache.hadoop.conf.Configuration;
@@ -21,11 +28,18 @@ import org.apache.log4j.Logger;
 
 public class HBaseExample {
   private static final Logger log = Logger.getLogger(UsersHBase.class);
+  /*
+   * Change the following, as appropriate, to the hostname or
+   * IP address of your server. If using hostname, make sure
+   * that name resolves to an IP address, e.g. has an entry in
+   * your /etc/hosts file
+   */
+  private static final String serverName = "kingfisher";
 
   public static void main(String args []) throws Exception {
 
     Configuration config = HBaseConfiguration.create();
-    config.set("hbase.zookeeper.quorum", "kingfisher");
+    config.set("hbase.zookeeper.quorum", serverName);
     HBaseAdmin admin = new HBaseAdmin(config);
 
     HTablePool pool = new HTablePool();

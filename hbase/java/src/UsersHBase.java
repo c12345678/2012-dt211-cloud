@@ -1,5 +1,12 @@
 // vim: set ts=2 sw=2 expandtab:
 
+/*
+ * Credits: Rewokring of TwitBase code from HBase In Action
+ *
+ * https://github.com/hbaseinaction/twitbase
+ *
+ */
+
 import org.apache.hadoop.hbase.client.Delete;
 import org.apache.hadoop.hbase.client.Get;
 import org.apache.hadoop.hbase.client.HTableInterface;
